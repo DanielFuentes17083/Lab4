@@ -2,7 +2,7 @@
  * File:   main.c
  * Author: Daniel Fuentes
  *
- * Created on 19 de febrero de 2020, 02:31 PM
+ * Created on 19 de febrero de 2020, 02:29 PM
  */
 
 
@@ -27,67 +27,42 @@
 
 #include <xc.h>
 #include <stdint.h>
-#include "ADC.h"
 #include "SPI.h"
 
 #define _XTAL_FREQ 8000000
 
-void setup(void);
-uint8_t ADCF = 0;
-uint8_t va1 = 0;
-uint8_t va2 = 0;
+uint8_t pot1 = 0;
+uint8_t pot2 = 0;
 
-void __interrupt() ISR(){           //Interrupciones
-    di();
-    if(PIR1bits.ADIF == 1 && ADCF == 0){            //Si es el ADC
-        PIR1bits.ADIF = 0;
-        ADCF = 1;
-        va1 = ADRESH;                               //Primer Pot
-        ADRESH = 0;
-        channelS(1);
-    } else if(PIR1bits.ADIF == 1 && ADCF == 1){
-        PIR1bits.ADIF = 0;
-        ADCF = 0;
-        va2 = ADRESH;                               //Segundo Pot
-        ADRESH = 0;
-        channelS(0);
-    }
-    ei();
-}
+void setup(void);
+
 void main(void) {
     setup();
-    ADConfig();             //Configuracion de ADC
-    channelS(0);            //canal inicial del ADC
     while(1){
-        ADCON0bits.GO = 1;
+        PORTCbits.RC2 = 0;
+        __delay_ms(1);
+        spiWrite(1);
+        pot1 = spiRead();
         __delay_ms(10);
-        if(spiRead() == 1){
-            spiWrite(va1);
-        }
-        if(spiRead() == 0){
-            spiWrite(va2);
-        }
+        spiWrite(0);
+        pot2 = spiRead();
+         __delay_ms(1);
+       PORTCbits.RC2 = 1;       //Slave Deselect 
+       
     }
+    
 }
 
 void setup(void){
     ANSEL = 0;
     ANSELH = 0;
-    ANSELbits.ANS0 = 1;     
-    ANSELbits.ANS1 = 1;
-    
-    TRISA = 0x03;
+    TRISC2 = 0;
+    TRISA = 0;
     TRISB = 0;
     TRISD = 0;
-    
+    PORTA = 0;
     PORTB = 0;
     PORTD = 0;
-    
-    INTCONbits.GIE = 1;         // Habilitamos interrupciones
-    INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
-    PIE1bits.ADIE = 1;
-    PIR1bits.ADIF = 0;
-    PIE1bits.SSPIE = 0;         
-    TRISAbits.TRISA5 = 1;       // Slave Select
-    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    PORTCbits.RC2 = 1;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }

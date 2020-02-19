@@ -2648,17 +2648,6 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 # 29 "main.c" 2
 
-# 1 "./ADC.h" 1
-
-
-
-
-
-
-void ADConfig(void);
-void channelS(uint8_t channel);
-# 30 "main.c" 2
-
 # 1 "./SPI.h" 1
 
 
@@ -2698,67 +2687,43 @@ void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
 void spiWrite(char);
 unsigned spiDataReady();
 char spiRead();
-# 31 "main.c" 2
+# 30 "main.c" 2
 
 
 
+
+uint8_t pot1 = 0;
+uint8_t pot2 = 0;
 
 void setup(void);
-uint8_t ADCF = 0;
-uint8_t va1 = 0;
-uint8_t va2 = 0;
 
-void __attribute__((picinterrupt(("")))) ISR(){
-    (INTCONbits.GIE = 0);
-    if(PIR1bits.ADIF == 1 && ADCF == 0){
-        PIR1bits.ADIF = 0;
-        ADCF = 1;
-        va1 = ADRESH;
-        ADRESH = 0;
-        channelS(1);
-    } else if(PIR1bits.ADIF == 1 && ADCF == 1){
-        PIR1bits.ADIF = 0;
-        ADCF = 0;
-        va2 = ADRESH;
-        ADRESH = 0;
-        channelS(0);
-    }
-    (INTCONbits.GIE = 1);
-}
 void main(void) {
     setup();
-    ADConfig();
-    channelS(0);
     while(1){
-        ADCON0bits.GO = 1;
+        PORTCbits.RC2 = 0;
+        _delay((unsigned long)((1)*(8000000/4000.0)));
+        spiWrite(1);
+        pot1 = spiRead();
         _delay((unsigned long)((10)*(8000000/4000.0)));
-        if(spiRead() == 1){
-            spiWrite(va1);
-        }
-        if(spiRead() == 0){
-            spiWrite(va2);
-        }
+        spiWrite(0);
+        pot2 = spiRead();
+         _delay((unsigned long)((1)*(8000000/4000.0)));
+       PORTCbits.RC2 = 1;
+
     }
+
 }
 
 void setup(void){
     ANSEL = 0;
     ANSELH = 0;
-    ANSELbits.ANS0 = 1;
-    ANSELbits.ANS1 = 1;
-
-    TRISA = 0x03;
+    TRISC2 = 0;
+    TRISA = 0;
     TRISB = 0;
     TRISD = 0;
-
+    PORTA = 0;
     PORTB = 0;
     PORTD = 0;
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIE1bits.ADIE = 1;
-    PIR1bits.ADIF = 0;
-    PIE1bits.SSPIE = 0;
-    TRISAbits.TRISA5 = 1;
-    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    PORTCbits.RC2 = 1;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
