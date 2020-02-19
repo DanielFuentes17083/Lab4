@@ -5,7 +5,7 @@
  * Created on 19 de febrero de 2020, 02:54 PM
  */
 
-#include "SP.h"
+#include "SPI.h"
 
 void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTransmitEdge)
 {

@@ -14,8 +14,7 @@
 
 
 
-# 1 "./SPI.h" 1
-
+# 1 "./SP.h" 1
 
 
 
@@ -2503,7 +2502,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 5 "./SPI.h" 2
+# 4 "./SP.h" 2
 
 
 typedef enum

@@ -1,1 +1,1 @@
-build/default/production\SPI.p1: SPI.c SPI.h
+build/default/production\SPI.p1: SPI.c SP.h

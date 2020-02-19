@@ -27,7 +27,7 @@
 
 #include <xc.h>
 #include <stdint.h>
-#include "SPI.h"
+#include "SP.h"
 
 #define _XTAL_FREQ 8000000
 
