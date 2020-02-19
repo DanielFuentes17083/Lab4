@@ -1,14 +1,14 @@
 ### HEXMate logfile and output summary ###
 ### Memory Usage ###
  Unused memory ranges:
-  6h - FC5h
+  6h - F87h
   1000h - 3FFFh
   4000h - 400Dh
   4012h - 403Fh
   
  dist/default/production\Lab4_D2.X.production.hex ranges:
   0h - 5h
-  FC6h - FFFh
+  F88h - FFFh
   400Eh - 4011h
   
 ### Hex Memory Map ###
@@ -24,5 +24,6 @@
   X = Find & delete opcode
   1 = dist/default/production\Lab4_D2.X.production.hex
 00000000: 111111----------------------------------------------------------
-00000FC0: ------1111111111111111111111111111111111111111111111111111111111
+00000F80: --------11111111111111111111111111111111111111111111111111111111
+00000FC0: 1111111111111111111111111111111111111111111111111111111111111111
 00004000: --------------1111----------------------------------------------

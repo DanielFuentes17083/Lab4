@@ -27,6 +27,7 @@
 
 #include <xc.h>
 #include <stdint.h>
+#include "SPI.h"
 
 #define _XTAL_FREQ 8000000
 
@@ -35,6 +36,7 @@ void setup(void);
 
 void main(void) {
     setup();
+    
 }
 
 void setup(void){
@@ -48,4 +50,5 @@ void setup(void){
     PORTB = 0;
     PORTD = 0;
     PORTCbits.RC2 = 1;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
