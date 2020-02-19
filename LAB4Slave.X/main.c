@@ -54,6 +54,8 @@ void __interrupt() ISR(){           //Interrupciones
     }
     if(SSPIF == 1 && ADCF == 0){
         spiWrite(va1);
+    } else if(SSPIF == 1 && ADCF == 1){
+        spiWrite(va2);
     }
     ei();
 }
@@ -83,6 +85,7 @@ void setup(void){
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIE1bits.ADIE = 1;
+    PIR1bits.ADIF = 0;
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
     PIE1bits.SSPIE = 1;         // Habilitamos interrupción MSSP
     TRISAbits.TRISA5 = 1;       // Slave Select

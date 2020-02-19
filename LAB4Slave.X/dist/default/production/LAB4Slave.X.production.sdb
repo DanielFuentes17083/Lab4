@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"89 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
+"92 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
 [e E1295 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -60,9 +60,9 @@ SPI_ACTIVE_2_IDLE 64
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
-"60
+"62
 [v _main main `(v  1 e 1 0 ]
-"70
+"72
 [v _setup setup `(v  1 e 1 0 ]
 "10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -242,15 +242,15 @@ SPI_ACTIVE_2_IDLE 64
 [v _va1 va1 `uc  1 e 1 0 ]
 "38
 [v _va2 va2 `uc  1 e 1 0 ]
-"60
+"62
 [v _main main `(v  1 e 1 0 ]
 {
-"68
-} 0
 "70
+} 0
+"72
 [v _setup setup `(v  1 e 1 0 ]
 {
-"90
+"93
 } 0
 "10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -280,7 +280,7 @@ SPI_ACTIVE_2_IDLE 64
 "40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"59
+"61
 } 0
 "23 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\ADC.c
 [v i1_channelS channelS `(v  1 e 1 0 ]
