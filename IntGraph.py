@@ -1,5 +1,5 @@
-from tkinter import *
-import serial
+from tkinter import * #https://likegeeks.com/es/ejemplos-de-la-gui-de-python/
+import serial #https://github.com/JALR0701/Laboratorio-4/blob/master/GUI.py
 import struct
 import time
 

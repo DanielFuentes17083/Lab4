@@ -181,7 +181,7 @@ config 400E 4011 CONFIG 400E 0
 cstackCOMMON 70 79 COMMON 70 1
 %locals
 dist/default/production\Lab4Master.X.production.o
-C:\Users\PowerLab\AppData\Local\Temp\savc.s
+C:\Users\PowerLab\AppData\Local\Temp\s60g.s
 804 F 0 CODE 0
 807 F 0 CODE 0
 821 F 0 CODE 0

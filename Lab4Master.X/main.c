@@ -40,7 +40,7 @@ void setup(void);
 void __interrupt() ISR(){
     di();
     if(PIR1bits.RCIF == 1){                         //Si recibio algun valor
-        PORTA = RCREG;
+        PORTB = RCREG;
     }
     ei();
 }
@@ -55,7 +55,7 @@ void main(void) {
         __delay_ms(10);
         spiWrite(0);
         pot2 = spiRead();
-         __delay_ms(1);
+         __delay_ms(10);
        PORTCbits.RC2 = 1;       //Slave Deselect 
        ENVIO(pot1);
        ENVIO(pot2);

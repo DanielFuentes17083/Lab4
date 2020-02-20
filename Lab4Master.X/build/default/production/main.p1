@@ -27,9 +27,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "553
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
 [v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
-"166
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"228
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "1140
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
@@ -82,9 +82,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1602
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"228
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"166
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "352
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
@@ -386,8 +386,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 139  ]
 {
 "43
-[; ;main.c: 43:         PORTA = RCREG;
-[e = _PORTA _RCREG ]
+[; ;main.c: 43:         PORTB = RCREG;
+[e = _PORTB _RCREG ]
 "44
 [; ;main.c: 44:     }
 }
@@ -438,8 +438,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 57:         pot2 = spiRead();
 [e = _pot2 -> ( _spiRead ..  `uc ]
 "58
-[; ;main.c: 58:          _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 58:          _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "59
 [; ;main.c: 59:        PORTCbits.RC2 = 1;
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]

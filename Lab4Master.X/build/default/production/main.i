@@ -2714,7 +2714,7 @@ void setup(void);
 void __attribute__((picinterrupt(("")))) ISR(){
     (INTCONbits.GIE = 0);
     if(PIR1bits.RCIF == 1){
-        PORTA = RCREG;
+        PORTB = RCREG;
     }
     (INTCONbits.GIE = 1);
 }
@@ -2729,7 +2729,7 @@ void main(void) {
         _delay((unsigned long)((10)*(8000000/4000.0)));
         spiWrite(0);
         pot2 = spiRead();
-         _delay((unsigned long)((1)*(8000000/4000.0)));
+         _delay((unsigned long)((10)*(8000000/4000.0)));
        PORTCbits.RC2 = 1;
        ENVIO(pot1);
        ENVIO(pot2);

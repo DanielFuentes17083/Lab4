@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Feb 19 18:14:54 2020
+                                                                                               Wed Feb 19 20:21:51 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F887
@@ -381,10 +381,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    367  0013                     _SSPBUF	set	19
    368  0014                     _SSPCON	set	20
    369  0008                     _PORTD	set	8
-   370  0006                     _PORTB	set	6
+   370  0005                     _PORTA	set	5
    371  0007                     _PORTCbits	set	7
    372  001A                     _RCREG	set	26
-   373  0005                     _PORTA	set	5
+   373  0006                     _PORTB	set	6
    374  000C                     _PIR1bits	set	12
    375  000B                     _INTCONbits	set	11
    376  0099                     _SPBRG	set	153
@@ -623,17 +623,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    609  0053  00F8               	movwf	_pot2
    610  0054                     l1008:	
    611                           
-   612                           ;main.c: 58:          _delay((unsigned long)((1)*(8000000/4000.0)));
-   613  0054  3003               	movlw	3
+   612                           ;main.c: 58:          _delay((unsigned long)((10)*(8000000/4000.0)));
+   613  0054  301A               	movlw	26
    614  0055  00F7               	movwf	??_main+1
-   615  0056  3097               	movlw	151
+   615  0056  30F8               	movlw	248
    616  0057  00F6               	movwf	??_main
    617  0058                     u87:	
    618  0058  0BF6               	decfsz	??_main,f
    619  0059  2858               	goto	u87
    620  005A  0BF7               	decfsz	??_main+1,f
    621  005B  2858               	goto	u87
-   622  005C  285D               	nop2
+   622  005C  0000               	nop
    623  005D                     l1010:	
    624                           
    625                           ;main.c: 59:        PORTCbits.RC2 = 1;
@@ -1347,9 +1347,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1330  00F7                     u4_20:	
   1331  00F7                     i1l794:	
   1332                           
-  1333                           ;main.c: 43:         PORTA = RCREG;
+  1333                           ;main.c: 43:         PORTB = RCREG;
   1334  00F7  081A               	movf	26,w	;volatile
-  1335  00F8  0085               	movwf	5	;volatile
+  1335  00F8  0086               	movwf	6	;volatile
   1336  00F9                     i1l796:	
   1337                           
   1338                           ;main.c: 45:     (INTCONbits.GIE = 1);
@@ -1526,7 +1526,7 @@ DATA                 0      0       A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Feb 19 18:14:54 2020
+Symbol Table                                                                                   Wed Feb 19 20:21:51 2020
 
              __CFG_CP$OFF 0000               _SSPSTATbits 0094                        l61 00D9  
                       l81 0116                        l84 011C                        l77 00EA  
