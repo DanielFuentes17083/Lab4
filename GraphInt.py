@@ -57,10 +57,10 @@ def ENVIO():
 def getSerial():
     p1 = ord(data.read())
     p2 = ord(data.read())
-    conv1 = str("{0.2f}".format(p1*(5/255)) + " V"
-    conv2 = str("{0.2f}".format(p2*(5/255)) + " V"
-    pot1.set(conv1)
-    pot2.set(conv2)
+    m1 = "{0:.2f}".format(p1 *(5/255))
+    m2 = "{0:.2f}".format(p2 *(5/255))
+    pot1.set(str(m1)+" V")
+    pot2.set(str(m2)+" V")
     gui.after(10,getSerial)
 
 gui.after(10,getSerial)
