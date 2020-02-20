@@ -28,6 +28,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include "SPI.h"
+#include "SERIALCOM.h"
 
 #define _XTAL_FREQ 8000000
 

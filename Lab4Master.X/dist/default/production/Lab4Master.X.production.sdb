@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"67 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"68 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -53,9 +53,9 @@ SPI_ACTIVE_2_IDLE 64
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"39 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"56
+"57
 [v _setup setup `(v  1 e 1 0 ]
 "10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -83,16 +83,68 @@ SPI_ACTIVE_2_IDLE 64
 [v _PORTCbits PORTCbits `VES35  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S342 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"482
+[s S351 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S356 . 1 `S342 1 . 1 0 `S351 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES356  1 e 1 @11 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S277 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1068
+[s S286 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S290 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S293 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S296 . 1 `S277 1 . 1 0 `S286 1 . 1 0 `S290 1 . 1 0 `S293 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES296  1 e 1 @24 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S374 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1718
+[u S382 . 1 `S374 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES382  1 e 1 @140 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
 [s S131 . 1 `uc 1 BF 1 0 :1:0 
@@ -138,6 +190,39 @@ SPI_ACTIVE_2_IDLE 64
 ]
 [u S171 . 1 `S131 1 . 1 0 `S140 1 . 1 0 `S145 1 . 1 0 `S151 1 . 1 0 `S156 1 . 1 0 `S161 1 . 1 0 `S166 1 . 1 0 ]
 [v _SSPSTATbits SSPSTATbits `VES171  1 e 1 @148 ]
+[s S240 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2582
+[s S249 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S253 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S256 . 1 `S240 1 . 1 0 `S249 1 . 1 0 `S253 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES256  1 e 1 @152 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+[s S321 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3352
+[u S330 . 1 `S321 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES330  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -148,14 +233,14 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"34 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"35 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _pot1 pot1 `uc  1 e 1 0 ]
-"35
+"36
 [v _pot2 pot2 `uc  1 e 1 0 ]
-"39
+"40
 [v _main main `(v  1 e 1 0 ]
 {
-"54
+"55
 } 0
 "32 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
@@ -176,10 +261,10 @@ SPI_ACTIVE_2_IDLE 64
 {
 "30
 } 0
-"56 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"57 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"68
+"69
 } 0
 "10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
