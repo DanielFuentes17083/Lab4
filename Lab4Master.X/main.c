@@ -37,8 +37,16 @@ uint8_t pot2 = 0;
 
 void setup(void);
 
+void __interrupt() ISR(){
+    di();
+    if(PIR1bits.RCIF == 1){                         //Si recibio algun valor
+        PORTA = RCREG;
+    }
+    ei();
+}
 void main(void) {
     setup();
+    ComSetup(9600);
     while(1){
         PORTCbits.RC2 = 0;
         __delay_ms(1);
@@ -49,7 +57,8 @@ void main(void) {
         pot2 = spiRead();
          __delay_ms(1);
        PORTCbits.RC2 = 1;       //Slave Deselect 
-       
+       ENVIO(pot1);
+       ENVIO(pot2);
     }
     
 }
@@ -66,4 +75,6 @@ void setup(void){
     PORTD = 0;
     PORTCbits.RC2 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
 }

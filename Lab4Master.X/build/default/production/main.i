@@ -2711,8 +2711,16 @@ uint8_t pot2 = 0;
 
 void setup(void);
 
+void __attribute__((picinterrupt(("")))) ISR(){
+    (INTCONbits.GIE = 0);
+    if(PIR1bits.RCIF == 1){
+        PORTA = RCREG;
+    }
+    (INTCONbits.GIE = 1);
+}
 void main(void) {
     setup();
+    ComSetup(9600);
     while(1){
         PORTCbits.RC2 = 0;
         _delay((unsigned long)((1)*(8000000/4000.0)));
@@ -2723,7 +2731,8 @@ void main(void) {
         pot2 = spiRead();
          _delay((unsigned long)((1)*(8000000/4000.0)));
        PORTCbits.RC2 = 1;
-
+       ENVIO(pot1);
+       ENVIO(pot2);
     }
 
 }
@@ -2740,4 +2749,6 @@ void setup(void){
     PORTD = 0;
     PORTCbits.RC2 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
 }
