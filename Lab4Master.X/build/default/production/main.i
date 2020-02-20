@@ -2732,7 +2732,9 @@ void main(void) {
          _delay((unsigned long)((10)*(8000000/4000.0)));
        PORTCbits.RC2 = 1;
        ENVIO(pot1);
+       _delay((unsigned long)((1)*(8000000/4000.0)));
        ENVIO(pot2);
+       _delay((unsigned long)((1)*(8000000/4000.0)));
     }
 
 }

@@ -58,7 +58,9 @@ void main(void) {
          __delay_ms(10);
        PORTCbits.RC2 = 1;       //Slave Deselect 
        ENVIO(pot1);
+       __delay_ms(1);
        ENVIO(pot2);
+       __delay_ms(1);
     }
     
 }

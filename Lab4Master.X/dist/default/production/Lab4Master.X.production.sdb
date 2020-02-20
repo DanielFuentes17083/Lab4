@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"77 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"79 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -61,7 +61,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _ISR ISR `II(v  1 e 1 0 ]
 "47
 [v _main main `(v  1 e 1 0 ]
-"66
+"68
 [v _setup setup `(v  1 e 1 0 ]
 "10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -259,7 +259,7 @@ SPI_ACTIVE_2_IDLE 64
 "47
 [v _main main `(v  1 e 1 0 ]
 {
-"64
+"66
 } 0
 "32 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
@@ -280,10 +280,10 @@ SPI_ACTIVE_2_IDLE 64
 {
 "30
 } 0
-"66 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"68 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"80
+"82
 } 0
 "10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
