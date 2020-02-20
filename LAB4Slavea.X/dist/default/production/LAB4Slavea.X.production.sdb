@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"92 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
+"92 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\main.c
 [e E1295 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\SPI.c
+"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\SPI.c
 [e E1264 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -45,7 +45,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"12 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\ADC.c
+"12 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\ADC.c
 [v _ADConfig ADConfig `(v  1 e 1 0 ]
 "23
 [v _channelS channelS `(v  1 e 1 0 ]
@@ -58,13 +58,13 @@ SPI_ACTIVE_2_IDLE 64
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
+"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 "57
 [v _main main `(v  1 e 1 0 ]
 "73
 [v _setup setup `(v  1 e 1 0 ]
-"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\SPI.c
+"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "27
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
@@ -236,7 +236,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"36 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
+"36 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\main.c
 [v _ADCF ADCF `uc  1 e 1 0 ]
 "37
 [v _va1 va1 `uc  1 e 1 0 ]
@@ -247,7 +247,7 @@ SPI_ACTIVE_2_IDLE 64
 {
 "71
 } 0
-"32 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\SPI.c
+"32 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 {
 [v spiWrite@dat dat `uc  1 a 1 wreg ]
@@ -266,12 +266,12 @@ SPI_ACTIVE_2_IDLE 64
 {
 "30
 } 0
-"73 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
+"73 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
 "93
 } 0
-"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\SPI.c
+"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 {
 [v spiInit@sType sType `E1264  1 a 1 wreg ]
@@ -283,7 +283,7 @@ SPI_ACTIVE_2_IDLE 64
 [v spiInit@sType sType `E1264  1 a 1 3 ]
 "25
 } 0
-"23 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\ADC.c
+"23 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\ADC.c
 [v _channelS channelS `(v  1 e 1 0 ]
 {
 [v channelS@channel channel `uc  1 a 1 wreg ]
@@ -296,12 +296,12 @@ SPI_ACTIVE_2_IDLE 64
 {
 "21
 } 0
-"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\main.c
+"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
 "56
 } 0
-"23 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slave.X\ADC.c
+"23 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\LAB4Slavea.X\ADC.c
 [v i1_channelS channelS `(v  1 e 1 0 ]
 {
 [v i1channelS@channel channel `uc  1 a 1 wreg ]

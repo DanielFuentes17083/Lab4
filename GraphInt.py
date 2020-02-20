@@ -21,7 +21,6 @@ while(1): #Se inicializa la conexion con el puerto
 gui = Tk(className='Comunicacion serial')
 # set window size
 gui.geometry("900x600")
-
 pot1 = StingVar()
 pot2 = StingVar()
 pot1.set("0 V")

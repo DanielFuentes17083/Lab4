@@ -188,8 +188,8 @@ config 400E 4011 CONFIG 400E 0
 cstackCOMMON 70 77 COMMON 70 1
 cstackBANK0 20 27 BANK0 20 1
 %locals
-dist/default/production\LAB4Slave.X.production.o
-C:\Users\PowerLab\AppData\Local\Temp\s7i8.s
+dist/default/production\LAB4Slavea.X.production.o
+C:\Users\PowerLab\AppData\Local\Temp\sato.s
 798 11 0 CODE 0
 801 11 0 CODE 0
 821 11 0 CODE 0

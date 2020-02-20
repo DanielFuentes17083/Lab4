@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/LAB4Slave.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=LAB4Slave.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=lab4slave.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/LAB4Slavea.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=LAB4Slavea.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=lab4slavea.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/lab4slave.x/bin
+makeDirectory ${TMPDIR}/lab4slavea.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/lab4slave.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/lab4slavea.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/lab4slave.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/lab4slavea.x.tar *
 checkReturnCode
 
 # Cleanup
