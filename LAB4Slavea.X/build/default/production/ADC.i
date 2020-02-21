@@ -2647,6 +2647,8 @@ void ADConfig(void);
 void channelS(uint8_t channel);
 # 11 "ADC.c" 2
 
+
+
 void ADConfig(void) {
     ADCON0bits.ADON = 1;
     ADCON1bits.ADFM = 0;

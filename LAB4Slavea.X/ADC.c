@@ -9,7 +9,9 @@
 #include <xc.h>
 #include <stdint.h>
 #include "ADC.h"
-void ADConfig(void) {
+
+//libreria para implementacion de ADC
+void ADConfig(void) {       //configura el ADC
     ADCON0bits.ADON = 1;
     ADCON1bits.ADFM = 0;
     ADCON1bits.VCFG1 = 0;
@@ -20,7 +22,7 @@ void ADConfig(void) {
     ADCON0bits.ADCS0 = 1;
 }
 
-void channelS(uint8_t channel){
+void channelS(uint8_t channel){     //con esta funcion se puede cambiar el canal que leera el ADC
     switch (channel){
         case 0:
             ADCON0bits.CHS3 = 0;

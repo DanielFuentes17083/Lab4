@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Thu Feb 20 12:49:39 2020
+                                                                                               Fri Feb 21 17:32:31 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F887
@@ -516,7 +516,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    502 ;;
    503 ;; *************** function _main *****************
    504 ;; Defined at:
-   505 ;;		line 47 in file "main.c"
+   505 ;;		line 48 in file "main.c"
    506 ;; Parameters:    Size  Location     Type
    507 ;;		None
    508 ;; Auto vars:     Size  Location     Type
@@ -555,11 +555,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    541                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
    542                           
    543                           
-   544                           ;main.c: 48:     setup();
+   544                           ;main.c: 49:     setup();
    545  0015  120A  118A  20D0  120A  118A  	fcall	_setup
    546  001A                     l996:	
    547                           
-   548                           ;main.c: 49:     ComSetup(9600);
+   548                           ;main.c: 50:     ComSetup(9600);
    549  001A  3080               	movlw	128
    550  001B  00F2               	movwf	ComSetup@BR
    551  001C  3025               	movlw	37
@@ -567,13 +567,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    553  001E  120A  118A  2082  120A  118A  	fcall	_ComSetup
    554  0023                     l998:	
    555                           
-   556                           ;main.c: 51:         PORTCbits.RC2 = 0;
+   556                           ;main.c: 52:         PORTCbits.RC2 = 0;
    557  0023  1283               	bcf	3,5	;RP0=0, select bank0
    558  0024  1303               	bcf	3,6	;RP1=0, select bank0
    559  0025  1107               	bcf	7,2	;volatile
    560  0026                     l1000:	
    561                           
-   562                           ;main.c: 52:         _delay((unsigned long)((1)*(8000000/4000.0)));
+   562                           ;main.c: 53:         _delay((unsigned long)((1)*(8000000/4000.0)));
    563  0026  3003               	movlw	3
    564  0027  00F7               	movwf	??_main+1
    565  0028  3097               	movlw	151
@@ -586,19 +586,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    572  002E  282F               	nop2
    573  002F                     l1002:	
    574                           
-   575                           ;main.c: 53:         spiWrite(1);
+   575                           ;main.c: 54:         spiWrite(1);
    576  002F  3001               	movlw	1
    577  0030  120A  118A  212F  120A  118A  	fcall	_spiWrite
    578  0035                     l1004:	
    579                           
-   580                           ;main.c: 54:         pot1 = spiRead();
+   580                           ;main.c: 55:         pot1 = spiRead();
    581  0035  120A  118A  211F  120A  118A  	fcall	_spiRead
    582  003A  00F6               	movwf	??_main
    583  003B  0876               	movf	??_main,w
    584  003C  00F9               	movwf	_pot1
    585  003D                     l1006:	
    586                           
-   587                           ;main.c: 55:         _delay((unsigned long)((10)*(8000000/4000.0)));
+   587                           ;main.c: 56:         _delay((unsigned long)((10)*(8000000/4000.0)));
    588  003D  301A               	movlw	26
    589  003E  00F7               	movwf	??_main+1
    590  003F  30F8               	movlw	248
@@ -611,19 +611,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    597  0045  0000               	nop
    598  0046                     l1008:	
    599                           
-   600                           ;main.c: 56:         spiWrite(0);
+   600                           ;main.c: 57:         spiWrite(0);
    601  0046  3000               	movlw	0
    602  0047  120A  118A  212F  120A  118A  	fcall	_spiWrite
    603  004C                     l1010:	
    604                           
-   605                           ;main.c: 57:         pot2 = spiRead();
+   605                           ;main.c: 58:         pot2 = spiRead();
    606  004C  120A  118A  211F  120A  118A  	fcall	_spiRead
    607  0051  00F6               	movwf	??_main
    608  0052  0876               	movf	??_main,w
    609  0053  00F8               	movwf	_pot2
    610  0054                     l1012:	
    611                           
-   612                           ;main.c: 58:          _delay((unsigned long)((10)*(8000000/4000.0)));
+   612                           ;main.c: 59:          _delay((unsigned long)((10)*(8000000/4000.0)));
    613  0054  301A               	movlw	26
    614  0055  00F7               	movwf	??_main+1
    615  0056  30F8               	movlw	248
@@ -636,18 +636,18 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    622  005C  0000               	nop
    623  005D                     l1014:	
    624                           
-   625                           ;main.c: 59:        PORTCbits.RC2 = 1;
+   625                           ;main.c: 60:        PORTCbits.RC2 = 1;
    626  005D  1283               	bcf	3,5	;RP0=0, select bank0
    627  005E  1303               	bcf	3,6	;RP1=0, select bank0
    628  005F  1507               	bsf	7,2	;volatile
    629  0060                     l1016:	
    630                           
-   631                           ;main.c: 60:        ENVIO(pot1);
+   631                           ;main.c: 61:        ENVIO(pot1);
    632  0060  0879               	movf	_pot1,w
    633  0061  120A  118A  2113  120A  118A  	fcall	_ENVIO
    634  0066                     l1018:	
    635                           
-   636                           ;main.c: 61:        _delay((unsigned long)((1)*(8000000/4000.0)));
+   636                           ;main.c: 62:        _delay((unsigned long)((1)*(8000000/4000.0)));
    637  0066  3003               	movlw	3
    638  0067  00F7               	movwf	??_main+1
    639  0068  3097               	movlw	151
@@ -660,12 +660,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    646  006E  286F               	nop2
    647  006F                     l1020:	
    648                           
-   649                           ;main.c: 62:        ENVIO(pot2);
+   649                           ;main.c: 63:        ENVIO(pot2);
    650  006F  0878               	movf	_pot2,w
    651  0070  120A  118A  2113  120A  118A  	fcall	_ENVIO
    652  0075                     l1022:	
    653                           
-   654                           ;main.c: 63:        _delay((unsigned long)((1)*(8000000/4000.0)));
+   654                           ;main.c: 64:        _delay((unsigned long)((1)*(8000000/4000.0)));
    655  0075  3003               	movlw	3
    656  0076  00F7               	movwf	??_main+1
    657  0077  3097               	movlw	151
@@ -684,7 +684,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    670  012F                     __ptext1:	
    671 ;; *************** function _spiWrite *****************
    672 ;; Defined at:
-   673 ;;		line 32 in file "SPI.c"
+   673 ;;		line 33 in file "SPI.c"
    674 ;; Parameters:    Size  Location     Type
    675 ;;  dat             1    wreg     unsigned char 
    676 ;; Auto vars:     Size  Location     Type
@@ -722,7 +722,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    708  012F  00F2               	movwf	spiWrite@dat
    709  0130                     l780:	
    710                           
-   711                           ;SPI.c: 32: void spiWrite(char dat);SPI.c: 33: {;SPI.c: 34:     SSPBUF = dat;
+   711                           ;SPI.c: 33: void spiWrite(char dat);SPI.c: 34: {;SPI.c: 35:     SSPBUF = dat;
    712  0130  0872               	movf	spiWrite@dat,w
    713  0131  1283               	bcf	3,5	;RP0=0, select bank0
    714  0132  1303               	bcf	3,6	;RP1=0, select bank0
@@ -735,7 +735,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    721  011F                     __ptext2:	
    722 ;; *************** function _spiRead *****************
    723 ;; Defined at:
-   724 ;;		line 45 in file "SPI.c"
+   724 ;;		line 46 in file "SPI.c"
    725 ;; Parameters:    Size  Location     Type
    726 ;;		None
    727 ;; Auto vars:     Size  Location     Type
@@ -771,11 +771,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    757                           ; Regs used in _spiRead: [wreg+status,2+status,0+pclath+cstack]
    758                           
    759                           
-   760                           ;SPI.c: 47:     spiReceiveWait();
+   760                           ;SPI.c: 48:     spiReceiveWait();
    761  011F  120A  118A  2128  120A  118A  	fcall	_spiReceiveWait
    762  0124                     l784:	
    763                           
-   764                           ;SPI.c: 48:     return(SSPBUF);
+   764                           ;SPI.c: 49:     return(SSPBUF);
    765  0124  1283               	bcf	3,5	;RP0=0, select bank0
    766  0125  1303               	bcf	3,6	;RP1=0, select bank0
    767  0126  0813               	movf	19,w	;volatile
@@ -787,7 +787,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    773  0128                     __ptext3:	
    774 ;; *************** function _spiReceiveWait *****************
    775 ;; Defined at:
-   776 ;;		line 27 in file "SPI.c"
+   776 ;;		line 28 in file "SPI.c"
    777 ;; Parameters:    Size  Location     Type
    778 ;;		None
    779 ;; Auto vars:     Size  Location     Type
@@ -823,7 +823,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    809                           ; Regs used in _spiReceiveWait: []
    810                           
    811  0128                     l81:	
-   812                           ;SPI.c: 29:     while ( !SSPSTATbits.BF );
+   812                           ;SPI.c: 30:     while ( !SSPSTATbits.BF );
    813                           
    814  0128  1683               	bsf	3,5	;RP0=1, select bank1
    815  0129  1303               	bcf	3,6	;RP1=0, select bank1
@@ -841,7 +841,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    827  00D0                     __ptext4:	
    828 ;; *************** function _setup *****************
    829 ;; Defined at:
-   830 ;;		line 68 in file "main.c"
+   830 ;;		line 69 in file "main.c"
    831 ;; Parameters:    Size  Location     Type
    832 ;;		None
    833 ;; Auto vars:     Size  Location     Type
@@ -877,46 +877,46 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    863                           ; Regs used in _setup: [wreg+status,2+status,0+pclath+cstack]
    864                           
    865                           
-   866                           ;main.c: 69:     ANSEL = 0;
+   866                           ;main.c: 70:     ANSEL = 0;
    867  00D0  1683               	bsf	3,5	;RP0=1, select bank3
    868  00D1  1703               	bsf	3,6	;RP1=1, select bank3
    869  00D2  0188               	clrf	8	;volatile
    870                           
-   871                           ;main.c: 70:     ANSELH = 0;
+   871                           ;main.c: 71:     ANSELH = 0;
    872  00D3  0189               	clrf	9	;volatile
    873  00D4                     l946:	
    874                           
-   875                           ;main.c: 71:     TRISC2 = 0;
+   875                           ;main.c: 72:     TRISC2 = 0;
    876  00D4  1683               	bsf	3,5	;RP0=1, select bank1
    877  00D5  1303               	bcf	3,6	;RP1=0, select bank1
    878  00D6  1107               	bcf	7,2	;volatile
    879                           
-   880                           ;main.c: 72:     TRISA = 0;
+   880                           ;main.c: 73:     TRISA = 0;
    881  00D7  0185               	clrf	5	;volatile
    882                           
-   883                           ;main.c: 73:     TRISB = 0;
+   883                           ;main.c: 74:     TRISB = 0;
    884  00D8  0186               	clrf	6	;volatile
    885                           
-   886                           ;main.c: 74:     TRISD = 0;
+   886                           ;main.c: 75:     TRISD = 0;
    887  00D9  0188               	clrf	8	;volatile
    888                           
-   889                           ;main.c: 75:     PORTA = 0;
+   889                           ;main.c: 76:     PORTA = 0;
    890  00DA  1283               	bcf	3,5	;RP0=0, select bank0
    891  00DB  1303               	bcf	3,6	;RP1=0, select bank0
    892  00DC  0185               	clrf	5	;volatile
    893                           
-   894                           ;main.c: 76:     PORTB = 0;
+   894                           ;main.c: 77:     PORTB = 0;
    895  00DD  0186               	clrf	6	;volatile
    896                           
-   897                           ;main.c: 77:     PORTD = 0;
+   897                           ;main.c: 78:     PORTD = 0;
    898  00DE  0188               	clrf	8	;volatile
    899  00DF                     l948:	
    900                           
-   901                           ;main.c: 78:     PORTCbits.RC2 = 1;
+   901                           ;main.c: 79:     PORTCbits.RC2 = 1;
    902  00DF  1507               	bsf	7,2	;volatile
    903  00E0                     l950:	
    904                           
-   905                           ;main.c: 79:     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW
+   905                           ;main.c: 80:     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW
       +                          , SPI_IDLE_2_ACTIVE);
    906  00E0  01F2               	clrf	spiInit@sDataSample
    907  00E1  01F3               	clrf	spiInit@sClockIdle
@@ -925,11 +925,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    910  00E4  120A  118A  20EC  120A  118A  	fcall	_spiInit
    911  00E9                     l952:	
    912                           
-   913                           ;main.c: 80:     INTCONbits.GIE = 1;
+   913                           ;main.c: 81:     INTCONbits.GIE = 1;
    914  00E9  178B               	bsf	11,7	;volatile
    915  00EA                     l954:	
    916                           
-   917                           ;main.c: 81:     INTCONbits.PEIE = 1;
+   917                           ;main.c: 82:     INTCONbits.PEIE = 1;
    918  00EA  170B               	bsf	11,6	;volatile
    919  00EB                     l61:	
    920  00EB  0008               	return
@@ -939,7 +939,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    924  00EC                     __ptext5:	
    925 ;; *************** function _spiInit *****************
    926 ;; Defined at:
-   927 ;;		line 10 in file "SPI.c"
+   927 ;;		line 11 in file "SPI.c"
    928 ;; Parameters:    Size  Location     Type
    929 ;;  sType           1    wreg     enum E1264
    930 ;;  sDataSample     1    2[COMMON] enum E1272
@@ -980,13 +980,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    965  00EC  00F5               	movwf	spiInit@sType
    966  00ED                     l934:	
    967                           
-   968                           ;SPI.c: 10: void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sCl
-      +                          ockIdle, Spi_Transmit_Edge sTransmitEdge);SPI.c: 11: {;SPI.c: 12:     TRISC5 = 0;
+   968                           ;SPI.c: 11: void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sCl
+      +                          ockIdle, Spi_Transmit_Edge sTransmitEdge);SPI.c: 12: {;SPI.c: 13:     TRISC5 = 0;
    969  00ED  1683               	bsf	3,5	;RP0=1, select bank1
    970  00EE  1303               	bcf	3,6	;RP1=0, select bank1
    971  00EF  1287               	bcf	7,5	;volatile
    972                           
-   973                           ;SPI.c: 13:     if(sType & 0b00000100)
+   973                           ;SPI.c: 14:     if(sType & 0b00000100)
    974  00F0  1D75               	btfss	spiInit@sType,2
    975  00F1  28F3               	goto	u51
    976  00F2  28F4               	goto	u50
@@ -995,31 +995,31 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    979  00F4                     u50:	
    980  00F4                     l936:	
    981                           
-   982                           ;SPI.c: 14:     {;SPI.c: 15:         SSPSTAT = sTransmitEdge;
+   982                           ;SPI.c: 15:     {;SPI.c: 16:         SSPSTAT = sTransmitEdge;
    983  00F4  0874               	movf	spiInit@sTransmitEdge,w
    984  00F5  0094               	movwf	20	;volatile
    985  00F6                     l938:	
    986                           
-   987                           ;SPI.c: 16:         TRISC3 = 1;
+   987                           ;SPI.c: 17:         TRISC3 = 1;
    988  00F6  1587               	bsf	7,3	;volatile
    989                           
-   990                           ;SPI.c: 17:     }
+   990                           ;SPI.c: 18:     }
    991  00F7  28FC               	goto	l77
    992  00F8                     l940:	
    993                           
-   994                           ;SPI.c: 19:     {;SPI.c: 20:         SSPSTAT = sDataSample | sTransmitEdge;
+   994                           ;SPI.c: 20:     {;SPI.c: 21:         SSPSTAT = sDataSample | sTransmitEdge;
    995  00F8  0872               	movf	spiInit@sDataSample,w
    996  00F9  0474               	iorwf	spiInit@sTransmitEdge,w
    997  00FA  0094               	movwf	20	;volatile
    998  00FB                     l942:	
    999                           
-  1000                           ;SPI.c: 21:         TRISC3 = 0;
+  1000                           ;SPI.c: 22:         TRISC3 = 0;
   1001  00FB  1187               	bcf	7,3	;volatile
   1002  00FC                     l77:	
-  1003                           ;SPI.c: 22:     }
+  1003                           ;SPI.c: 23:     }
   1004                           
   1005                           
-  1006                           ;SPI.c: 24:     SSPCON = sType | sClockIdle;
+  1006                           ;SPI.c: 25:     SSPCON = sType | sClockIdle;
   1007  00FC  0875               	movf	spiInit@sType,w
   1008  00FD  0473               	iorwf	spiInit@sClockIdle,w
   1009  00FE  1283               	bcf	3,5	;RP0=0, select bank0
@@ -1327,7 +1327,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1310  0102                     __ptext8:	
   1311 ;; *************** function _ISR *****************
   1312 ;; Defined at:
-  1313 ;;		line 40 in file "main.c"
+  1313 ;;		line 41 in file "main.c"
   1314 ;; Parameters:    Size  Location     Type
   1315 ;;		None
   1316 ;; Auto vars:     Size  Location     Type
@@ -1359,10 +1359,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1342  0102                     _ISR:	
   1343  0102                     i1l792:	
   1344                           
-  1345                           ;main.c: 41:     (INTCONbits.GIE = 0);
+  1345                           ;main.c: 42:     (INTCONbits.GIE = 0);
   1346  0102  138B               	bcf	11,7	;volatile
   1347                           
-  1348                           ;main.c: 42:     if(PIR1bits.RCIF == 1){
+  1348                           ;main.c: 43:     if(PIR1bits.RCIF == 1){
   1349  0103  1283               	bcf	3,5	;RP0=0, select bank0
   1350  0104  1303               	bcf	3,6	;RP1=0, select bank0
   1351  0105  1E8C               	btfss	12,5	;volatile
@@ -1373,12 +1373,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1356  0109                     u4_20:	
   1357  0109                     i1l794:	
   1358                           
-  1359                           ;main.c: 43:         PORTB = RCREG;
+  1359                           ;main.c: 44:         PORTB = RCREG;
   1360  0109  081A               	movf	26,w	;volatile
   1361  010A  0086               	movwf	6	;volatile
   1362  010B                     i1l796:	
   1363                           
-  1364                           ;main.c: 45:     (INTCONbits.GIE = 1);
+  1364                           ;main.c: 46:     (INTCONbits.GIE = 1);
   1365  010B  178B               	bsf	11,7	;volatile
   1366  010C                     i1l50:	
   1367  010C  0871               	movf	??_ISR+1,w
@@ -1552,7 +1552,7 @@ DATA                 0      0       A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Thu Feb 20 12:49:39 2020
+Symbol Table                                                                                   Fri Feb 21 17:32:31 2020
 
              __CFG_CP$OFF 0000               _SSPSTATbits 0094                        l61 00EB  
                       l81 0128                        l84 012E                        l77 00FC  

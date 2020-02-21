@@ -30,9 +30,10 @@
 #include "ADC.h"
 #include "SPI.h"
 
-#define _XTAL_FREQ 8000000
+//Programa principal del Slave
+#define _XTAL_FREQ 8000000          //se selecciona frecuencia de 8M
 
-void setup(void);
+void setup(void);                   //variables
 uint8_t ADCF = 0;
 uint8_t va1 = 0;
 uint8_t va2 = 0;
@@ -61,10 +62,10 @@ void main(void) {
     while(1){
         ADCON0bits.GO = 1;
         __delay_ms(10);
-        if(spiRead() == 1){
+        if(spiRead() == 1){ //si lee un 1 del master, envia el valor del primer pot
             spiWrite(va1);
         }
-        if(spiRead() == 0){
+        if(spiRead() == 0){ //si lee un 0 del master, envia el valor del segundo pot
             spiWrite(va2);
         }
     }
@@ -89,5 +90,5 @@ void setup(void){
     PIR1bits.ADIF = 0;
     PIE1bits.SSPIE = 0;         
     TRISAbits.TRISA5 = 1;       // Slave Select
-    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);    //configuracion de la comunicacion SPI como slave
 }

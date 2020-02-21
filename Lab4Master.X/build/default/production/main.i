@@ -2706,6 +2706,7 @@ void ENVIO(uint8_t value);
 
 
 
+
 uint8_t pot1 = 0;
 uint8_t pot2 = 0;
 

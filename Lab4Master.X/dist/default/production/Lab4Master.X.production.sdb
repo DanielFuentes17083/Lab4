@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"79 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"80 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
+"11 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [e E1264 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -57,19 +57,19 @@ SPI_ACTIVE_2_IDLE 64
 [v _ComSetup ComSetup `(v  1 e 1 0 ]
 "47
 [v _ENVIO ENVIO `(v  1 e 1 0 ]
-"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"41 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
-"47
+"48
 [v _main main `(v  1 e 1 0 ]
-"68
+"69
 [v _setup setup `(v  1 e 1 0 ]
-"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
+"11 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
-"27
+"28
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
-"32
+"33
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
-"45
+"46
 [v _spiRead spiRead `(uc  1 e 1 0 ]
 "166 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -252,40 +252,40 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"35 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"36 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _pot1 pot1 `uc  1 e 1 0 ]
-"36
+"37
 [v _pot2 pot2 `uc  1 e 1 0 ]
-"47
+"48
 [v _main main `(v  1 e 1 0 ]
 {
-"66
+"67
 } 0
-"32 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
+"33 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 {
 [v spiWrite@dat dat `uc  1 a 1 wreg ]
 [v spiWrite@dat dat `uc  1 a 1 wreg ]
-"34
-[v spiWrite@dat dat `uc  1 a 1 2 ]
 "35
+[v spiWrite@dat dat `uc  1 a 1 2 ]
+"36
 } 0
-"45
+"46
 [v _spiRead spiRead `(uc  1 e 1 0 ]
 {
-"49
+"50
 } 0
-"27
+"28
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
 {
-"30
+"31
 } 0
-"68 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"69 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"82
+"83
 } 0
-"10 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
+"11 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 {
 [v spiInit@sType sType `E1264  1 a 1 wreg ]
@@ -293,9 +293,9 @@ SPI_ACTIVE_2_IDLE 64
 [v spiInit@sDataSample sDataSample `E1272  1 p 1 2 ]
 [v spiInit@sClockIdle sClockIdle `E1276  1 p 1 3 ]
 [v spiInit@sTransmitEdge sTransmitEdge `E1280  1 p 1 4 ]
-"12
+"13
 [v spiInit@sType sType `E1264  1 a 1 5 ]
-"25
+"26
 } 0
 "47 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\EUSART.c
 [v _ENVIO ENVIO `(v  1 e 1 0 ]
@@ -311,8 +311,8 @@ SPI_ACTIVE_2_IDLE 64
 [v ComSetup@BR BR `ui  1 p 2 2 ]
 "45
 } 0
-"40 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
+"41 C:\Users\PowerLab\Documents\Nueva carpeta\Nueva carpeta\Lab4\Lab4Master.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"46
+"47
 } 0

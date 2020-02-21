@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\LAB4Slavea.X.production.sym \
   --cmf=dist/default/production\LAB4Slavea.X.production.cmf -z -Q16F887 \
-  -oC:\Users\PowerLab\AppData\Local\Temp\sato.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\PowerLab\AppData\Local\Temp\s3sg.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/LAB4Slavea.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\PowerLab\AppData\Local\Temp\sato.o \
+  -DENTRY=2 -k C:\Users\PowerLab\AppData\Local\Temp\s3sg.o \
   dist/default/production\LAB4Slavea.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\PowerLab\AppData\Local\Temp\sato.o
+C:\Users\PowerLab\AppData\Local\Temp\s3sg.o
                 end_init                              E        E        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -343,7 +343,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 57 in file "main.c"
+		line 58 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -376,7 +376,7 @@ Total ram usage:        2 bytes
 
  *************** function _spiWrite *****************
  Defined at:
-		line 32 in file "SPI.c"
+		line 33 in file "SPI.c"
  Parameters:    Size  Location     Type
   dat             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -406,7 +406,7 @@ Total ram usage:        1 bytes
 
  *************** function _spiRead *****************
  Defined at:
-		line 45 in file "SPI.c"
+		line 46 in file "SPI.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -436,7 +436,7 @@ Total ram usage:        0 bytes
 
  *************** function _spiReceiveWait *****************
  Defined at:
-		line 27 in file "SPI.c"
+		line 28 in file "SPI.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -466,7 +466,7 @@ Total ram usage:        0 bytes
 
  *************** function _setup *****************
  Defined at:
-		line 73 in file "main.c"
+		line 74 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -496,7 +496,7 @@ Total ram usage:        0 bytes
 
  *************** function _spiInit *****************
  Defined at:
-		line 10 in file "SPI.c"
+		line 11 in file "SPI.c"
  Parameters:    Size  Location     Type
   sType           1    wreg     enum E1264
   sDataSample     1    0[BANK0 ] enum E1272
@@ -529,7 +529,7 @@ Total ram usage:        4 bytes
 
  *************** function _channelS *****************
  Defined at:
-		line 23 in file "ADC.c"
+		line 25 in file "ADC.c"
  Parameters:    Size  Location     Type
   channel         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -559,7 +559,7 @@ Total ram usage:        3 bytes
 
  *************** function _ADConfig *****************
  Defined at:
-		line 12 in file "ADC.c"
+		line 14 in file "ADC.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -589,7 +589,7 @@ Total ram usage:        0 bytes
 
  *************** function _ISR *****************
  Defined at:
-		line 40 in file "main.c"
+		line 41 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -619,7 +619,7 @@ Total ram usage:        4 bytes
 
  *************** function i1_channelS *****************
  Defined at:
-		line 23 in file "ADC.c"
+		line 25 in file "ADC.c"
  Parameters:    Size  Location     Type
   channel         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type

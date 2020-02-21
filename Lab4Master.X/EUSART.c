@@ -5,12 +5,12 @@
  * Created on 14 de febrero de 2020, 02:18 PM
  */
 
-
+//Libreria de comunicacion serial
 #include <xc.h>
 #include <stdint.h>
 #include "SERIALCOM.h"
 
-void ComSetup(uint16_t BR) {
+void ComSetup(uint16_t BR) {            //funcion que hace el setup de comunicacion serial y selecciona el BaudRate
     TXSTAbits.TX9 = 0;
     TXSTAbits.TXEN = 1;
     TXSTAbits.SYNC = 0;
@@ -44,7 +44,7 @@ void ComSetup(uint16_t BR) {
     }
 }
 
-void ENVIO(uint8_t value){
+void ENVIO(uint8_t value){          //Funcion para enviar los datos por comunicacion serial
     while (TXSTAbits.TRMT == 0);
     TXREG = value;
 }

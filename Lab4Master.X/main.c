@@ -30,14 +30,15 @@
 #include "SPI.h"
 #include "SERIALCOM.h"
 
-#define _XTAL_FREQ 8000000
+//codigo principal del master
+#define _XTAL_FREQ 8000000                      //frecuencia del oscilador
 
-uint8_t pot1 = 0;
+uint8_t pot1 = 0;                               //variables para los pots
 uint8_t pot2 = 0;
 
 void setup(void);
 
-void __interrupt() ISR(){
+void __interrupt() ISR(){                           //Interrupciones
     di();
     if(PIR1bits.RCIF == 1){                         //Si recibio algun valor
         PORTB = RCREG;
@@ -45,21 +46,21 @@ void __interrupt() ISR(){
     ei();
 }
 void main(void) {
-    setup();
-    ComSetup(9600);
+    setup();                                        
+    ComSetup(9600);                               //se activa comunicacion serial a 9600
     while(1){
-        PORTCbits.RC2 = 0;
+        PORTCbits.RC2 = 0;      //Slave Select
         __delay_ms(1);
-        spiWrite(1);
-        pot1 = spiRead();
+        spiWrite(1);            //le pide el valor del primer pot
+        pot1 = spiRead();       //aca lo lee
         __delay_ms(10);
-        spiWrite(0);
-        pot2 = spiRead();
+        spiWrite(0);            //le pide el segundo valor del pot
+        pot2 = spiRead();       //aca lo lee
          __delay_ms(10);
        PORTCbits.RC2 = 1;       //Slave Deselect 
-       ENVIO(pot1);
+       ENVIO(pot1);             //envia el valor del pot1
        __delay_ms(1);
-       ENVIO(pot2);
+       ENVIO(pot2);             //envia el valor del pot2
        __delay_ms(1);
     }
     
@@ -76,7 +77,7 @@ void setup(void){
     PORTB = 0;
     PORTD = 0;
     PORTCbits.RC2 = 1;
-    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE); //configuracion del spi como master
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
 }

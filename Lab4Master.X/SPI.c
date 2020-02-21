@@ -7,7 +7,8 @@
 
 #include "SPI.h"
 
-void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTransmitEdge)
+//Libreria de comunicacion SPI (sacada del ejemplo de Pablo Mazariegos en clase)
+void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTransmitEdge) //funcion de configuracion de spi
 {
     TRISC5 = 0;
     if(sType & 0b00000100) //If Slave Mode
